@@ -31,6 +31,12 @@ using namespace std;
     (y >> x) -> (y / 2^x) -> x number of last bits removed from bit representation of y
 */
 
-int main() {
+bool IsOdd(int n) {
+    // If number is Odd then last bit is '1' otherwise '0'
+    return (n & 1);
+}
 
+int main() {
+    
+    return 0;
 }
