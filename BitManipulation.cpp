@@ -36,6 +36,32 @@ bool IsOdd(int n) {
     return (n & 1);
 }
 
+bool GetIthBit(int n, int i) {
+    int mask = (1LL << i);
+    return (n & mask);
+}
+
+int SetIthBit(int n, int i) {
+    int mask = (1LL << i);
+    return (n | mask);
+}
+
+int ClearIthBit(int n, int i) {
+    int mask = ~(1LL << i);
+    return (n & mask);
+}
+
+int UpdateIthBit(int n, int i, bool Set) {
+    return (Set ? SetIthBit(n, i) : ClearIthBit(n, i));
+}
+
+int ClearLastIBits(int n, int i) {
+    // int mask = ((1LL << i) - 1);
+    // int mask = (~01 << i);
+    int mask = (-1 << i);
+    return (n & mask);
+}
+
 int main() {
     
     return 0;
